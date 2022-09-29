@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "../Login/Login.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import '../Login/Login.css'
 
-import UserProfile from "./Components/UserProfile/userProfile.js";
-//import Contact from "./Contact";
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
@@ -28,12 +25,6 @@ function Login() {
     pass: "invalid password"
   };
 
-  const navigate = useNavigate();
-
-  const navigateToContacts = () => {
-    // 👇️ navigate to /contacts
-    navigate('/userProfile');
-  };
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
@@ -68,7 +59,7 @@ function Login() {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>User Id</label>
+          <label>Username </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
@@ -78,9 +69,7 @@ function Login() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" 
-            onChange={() => navigate("/userProfile")}
-          />
+          <input type="submit" />
         </div>
       </form>
     </div>
@@ -90,14 +79,7 @@ function Login() {
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? 
-        <div>
-          <Router>
-            <Routes>
-              <Route path="/userProfile" element={<UserProfile />} />
-            </Routes>
-          </Router>
-        </div> : renderForm}
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
     </div>
   );
