@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Payment from '../payment/Payment';
+import LoadingMask from "react-loadingmask";
 
-import '../Login/Login.css'
+import './Login.css'
 
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // User Login info
   const database = [
@@ -57,6 +60,9 @@ function Login() {
   // JSX code for login form
   const renderForm = (
     <div className="form">
+      
+      <div className="login-form">
+      <div className="title">Sign In</div>
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Username </label>
@@ -72,16 +78,32 @@ function Login() {
           <input type="submit" />
         </div>
       </form>
+      </div>
     </div>
   );
 
   return (
-    <div className="app">
-      <div className="login-form">
-        <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+    
+    <div>
+      <div style={{ 
+        backgroundImage: `url("/Images/pexels-mikhail-nilov-6969809.jpg")`
+        }}>
+
       </div>
+      <div className="header">
+        <a href="#default" class="logo">NPE</a>
+      </div>
+      {isSubmitted ? 
+        <div>
+          <LoadingMask loading={isLoading} text={"loading..."}>
+            <Payment setIsLoading={setIsLoading} />
+          </LoadingMask>
+          
+        </div> : <div className="app">{renderForm} </div>
+    }
+
     </div>
+    
   );
 }
 

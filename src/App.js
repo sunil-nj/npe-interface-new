@@ -1,15 +1,12 @@
-import Login from "./Components/Login/login.js"
-//import DrawerAppBar from "./Components/Login/header"
-import Header from "./Components/Login/header.js";
-
+import Login from './components/login/Login'
+// import Header from './components/login/header'
+import HomePage from './components/login/home';
+import LandingPage from './components/login/LandingPage';
 function App() {
   return (
     <div>
-      <Header></Header>
-      <Login></Login>
+      <LandingPage />
     </div>
-
   );
 }
-
 export default App;

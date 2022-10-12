@@ -1,3 +1,9 @@
-function Home() {
-    return <h2>Home</h2>;
-  }
+import LandingFrame from "../LandingFrame"
+function HomePage() {
+    return (
+      <div>
+      <LandingFrame />
+  </div>
+    )
+}
+export default HomePage;
