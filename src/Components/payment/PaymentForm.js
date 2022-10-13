@@ -8,7 +8,12 @@ import {
   LinearProgress,
   Box,
   Typography,
+  InputLabel,
+  NativeSelect
 } from "@mui/material";
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+
 //import { ProgressBar } from "react-bootstrap";
 //import { validator } from "./Validator";
 import useForm from "./useForm";
@@ -25,7 +30,7 @@ import {
   DialogActions,
 } from "@mui/material";
 import _ from "lodash";
-import '../login/Login.css';
+import '../Login/login.css';
 
 function TransitionUp(props) {
   return <Slide {...props} direction="up" />;
@@ -62,7 +67,7 @@ export default function PaymentForm({ onClose, setSnackBarOpen, setIsLoading }) 
   const cancelFileUpload = useRef(null);
   const [isReset, setIsReset] = useState(false);
   const mounted = useRef(true);
-
+  const [accType, setAccType] = React.useState('');
 
   const submit = (data) => {
     //This patientId has to be changed to props and check how to value from My Patient 360 App
@@ -116,6 +121,10 @@ export default function PaymentForm({ onClose, setSnackBarOpen, setIsLoading }) 
     callback: submit,
   });
 
+  const handleChange2 = (event: SelectChangeEvent) => {
+    setAccType(event.target.value);
+  };
+
   let isValidForm =
     Object.values(errors).filter((error) => typeof error !== "undefined")
       .length === 0;
@@ -168,6 +177,23 @@ export default function PaymentForm({ onClose, setSnackBarOpen, setIsLoading }) 
           className="input-field-margin"
           value={state.senderAccountTpe}
         />
+        {/* <InputLabel id="account-type">Account Type</InputLabel>
+  <Select
+    labelId="account-type"
+    label="Account Type"
+    value={accType}
+    name="senderAccountId"
+    defaultValue={state.senderAccountTpe}
+    onChange={handleChange2}
+  >
+    <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+    <MenuItem value={1}>Savings</MenuItem>
+    <MenuItem value={2}>Current</MenuItem>
+  </Select>
+  */}
+
         <br />
 
         {/* recepient phoneNumber */}

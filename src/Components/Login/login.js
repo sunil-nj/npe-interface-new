@@ -3,14 +3,19 @@ import ReactDOM from "react-dom";
 import Payment from '../payment/Payment';
 import LoadingMask from "react-loadingmask";
 
-import './Login.css'
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import './login.css'
 
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
+  const navigateHome =() =>{
+    navigate('/');
+  };
   // User Login info
   const database = [
     {
@@ -60,20 +65,24 @@ function Login() {
   // JSX code for login form
   const renderForm = (
     <div className="form">
-      
       <div className="login-form">
       <div className="title">Sign In</div>
+      <br />
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Username </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
+        <br />
         <div className="input-container">
           <label>Password </label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
+        <br />
+        <br />
+        <br />
         <div className="button-container">
           <input type="submit" />
         </div>
@@ -90,8 +99,8 @@ function Login() {
         }}>
 
       </div>
-      <div className="header">
-        <a href="#default" class="logo">NPE</a>
+      <div className="header2">
+      <a onClick={navigateHome} class="logo">NPE BANK</a>
       </div>
       {isSubmitted ? 
         <div>
