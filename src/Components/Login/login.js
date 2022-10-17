@@ -5,6 +5,7 @@ import LoadingMask from "react-loadingmask";
 
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import './login.css'
+import PaymentPage from "../payment/Navbar";
 
 function Login() {
   // React States
@@ -15,6 +16,9 @@ function Login() {
 
   const navigateHome =() =>{
     navigate('/');
+  };
+  const navigateProfile =() =>{
+    navigate('/profile');
   };
   // User Login info
   const database = [
@@ -84,7 +88,7 @@ function Login() {
         <br />
         <br />
         <div className="button-container">
-          <input type="submit" />
+          <input type="submit" onClick={navigateProfile}/>
         </div>
       </form>
       </div>
@@ -102,15 +106,15 @@ function Login() {
       <div className="header2">
       <a onClick={navigateHome} class="logo">NPE BANK</a>
       </div>
-      {isSubmitted ? 
+      {/* {isSubmitted ? 
         <div>
           <LoadingMask loading={isLoading} text={"loading..."}>
             <Payment setIsLoading={setIsLoading} />
           </LoadingMask>
           
         </div> : <div className="app">{renderForm} </div>
-    }
-
+    } */}
+     <div className="app">{renderForm} </div>
     </div>
     
   );

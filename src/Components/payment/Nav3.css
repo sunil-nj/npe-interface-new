@@ -1,0 +1,66 @@
+
+  .header3 {
+    overflow: hidden;
+    background-color: #1165af;
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+    padding: 20px 10px;
+    text-align: left;
+  }
+  /* Style the header links */
+.header3 a {
+  color: #ffffff;
+  text-shadow: 0.5px 0.5px  rgba(0, 0, 0, 0.445);
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header3 a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header3 a.logo:hover{
+  cursor: pointer;
+}
+
+/* Change the background color on mouse-over */
+
+
+/* Style the active/current link*/
+.header3 a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.navs {
+    clear: both;
+    overflow: hidden;
+    display: flex;
+    margin-top: 0.5px;
+    background-color: #1165af;
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    padding: 10px 10px;
+    text-align: right;
+}
+
+.navs a {
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px  rgba(0, 0, 0, 0.445);
+    padding-left: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  .navs a.logo {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .navs a.logo:hover{
+    cursor: pointer;
+  }
