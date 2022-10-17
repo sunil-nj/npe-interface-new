@@ -1,0 +1,95 @@
+.form1{
+    border-radius: 5px;
+    margin-top: 4%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+.title2{
+    color: #1165af;
+    text-shadow: 0.5px 0.5px  rgba(0, 0, 0, 0.445);
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+  .form1 label{
+    width: 45%;
+    float: left;
+    text-align: right;
+  }
+   .form1 input{
+    width: 30%;
+    height: 45px;
+    margin-left: 4%;
+    margin-right: 18%;
+    text-align: left;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 7px;
+	outline: none;
+   }
+    
+    .form1 input[type="submit"] {
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      background: #1165af;
+      border: 1px solid #1165af;
+      color: #fff;
+      width: 7%;
+      margin-left: 18%;
+      text-align: center;
+      padding: 10px 20px;
+    }
+
+    .form1 select{
+    width: 30%;
+    height: 45px;
+    text-align: left;
+    margin-left: 4%;
+    margin-right: 18%;
+        box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 7px;
+	outline: none;
+    }
+    
+    input[type="submit"]:hover {
+      background: #126cbbf1;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .payment-form {
+      border-radius: 5px;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .list-container {
+      display: flex;
+    }
