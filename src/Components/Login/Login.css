@@ -101,7 +101,7 @@
     box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
     border-bottom-right-radius: 5px; 
     border-bottom-left-radius: 5px;
-    padding: 10px 10px;
+    padding: 20px 10px;
   }
   /* Style the header links */
 .header a {
@@ -118,7 +118,7 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
-  font-size: 25px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -156,13 +156,15 @@
   font-weight: 500;
   text-emphasis: none;
   width: 50%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   text-shadow: 1px 1px 1px;
   }
 
   #button0{
     margin-right: 2%;
     background-color: #1165af;
+    padding: 15px 20px;
+    border-radius: 7px;
   }
 
   .header2 {

@@ -23,7 +23,7 @@ const handleProceed =() =>{
       </div>
       <div className="background1">
         <div className="bgText">Continue to the OnlineBanking Login Page</div>
-        <Button id="button0" variant="contained" onClick={handleProceed}>Proceed Now</Button>
+        <Button id="button0" variant="contained" onClick={handleProceed}>Proceed Now &#10140;</Button>
       </div>
     </div>
     

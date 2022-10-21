@@ -16,14 +16,24 @@ function Nav3(){
   const navigateProfile =() =>{
     navigate('/profile');
   };
+  const navigateAccounts =() =>{
+    navigate('/accounts');
+
+  };
+  const navigateSignin =() =>{
+    navigate('/login');
+
+  };
 return(<div>
     
     <div className="header3">
     <a onClick={navigateHome} class="logo">NPE BANK</a>
+    <a onClick={navigateSignin} class="navitem">Logout</a>
     </div>
     <div className="navs">
-      <a class="logo" onClick={navigateProfile}>Profile</a>
-      <a class="logo" onClick={navigatePayment}>Payments</a>
+      <a class="logo" id="profile" onClick={navigateProfile}>Profile</a>
+      <a class="logo" id="transfer" onClick={navigatePayment}>Funds Transfer</a>
+      <a class="logo" id="acc" onClick={navigateAccounts}>Accounts</a>
     </div>
 
   </div>);

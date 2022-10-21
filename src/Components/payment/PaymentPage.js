@@ -1,6 +1,7 @@
 import Nav3 from "./Navbar";
 import React, { useState } from "react";
 import "./PaymentPage.css"
+import { useForm } from "react-hook-form";
 
 function PaymentPage() {
 
@@ -11,12 +12,18 @@ function PaymentPage() {
         const value = event.target.value;
         setInputs(values => ({ ...values, [name]: value }))
     }
+  
+    const initval={uname:"account id", accType:"Savings", mobilen:"mobile number", mailid:"mail Id",amt:"0000",descrptn:"Description1"};
 
+    const handleReset = (event) =>{
+        setInputs(initval)
+    }
+  
     // JSX code for login form
     const renderForm = (
         <div className="form1">
             <div >
-                <div className="title2">Payment Form</div>
+                <div className="title2">Funds Transfer</div>
                 <br />
                 <form >
                     <div >
@@ -65,7 +72,8 @@ function PaymentPage() {
                     <br />
                     <br />
                     <div className="button-container">
-                        <input type="submit" />
+                        <button type="submit">Continue</button>
+                        <button type="button" onClick={handleReset}>Reset</button>
                     </div>
                 </form>
             </div>
@@ -73,10 +81,10 @@ function PaymentPage() {
     );
 
 
-    return (<div>
+    return (<body id="paypage">
         <Nav3 />
         <div>{renderForm}</div>
-    </div>)
+    </body>)
 }
 
 export default PaymentPage;

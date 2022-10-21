@@ -39,8 +39,23 @@
 	padding: 7px;
 	outline: none;
    }
-    
-    .form1 input[type="submit"] {
+   .form1 button{
+    height: 45px;
+    text-align: left;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 7px;
+	outline: none;
+   }
+    .form1 button[type="submit"],.form1 button[type="button"] {
       border-radius: 5px;
       margin-top: 10px;
       cursor: pointer;
@@ -49,7 +64,7 @@
       border: 1px solid #1165af;
       color: #fff;
       width: 7%;
-      margin-left: 18%;
+      margin: 1%;
       text-align: center;
       padding: 10px 20px;
     }
@@ -74,7 +89,7 @@
 	outline: none;
     }
     
-    input[type="submit"]:hover {
+    button[type="submit"]:hover ,button[type="button"]:hover{
       background: #126cbbf1;
     }
     

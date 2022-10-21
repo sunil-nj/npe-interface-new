@@ -4,6 +4,7 @@
     background-color: #1165af;
     box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
     padding: 20px 10px;
+    padding-bottom: 10px;
     text-align: left;
   }
   /* Style the header links */
@@ -19,7 +20,7 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header3 a.logo {
-  font-size: 25px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -36,16 +37,17 @@
   color: white;
 }
 
+
 .navs {
     clear: both;
     overflow: hidden;
     display: flex;
-    margin-top: 0.5px;
     background-color: #1165af;
     box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
     border-bottom-right-radius: 5px; 
     border-bottom-left-radius: 5px;
     padding: 10px 10px;
+    padding-bottom: 0%;
     text-align: right;
 }
 
@@ -58,9 +60,31 @@
     border-radius: 5px;
   }
   .navs a.logo {
-    font-size: 14px;
+    font-size: 18px;
+    padding: 1%;
     font-weight: bold;
   }
   .navs a.logo:hover{
     cursor: pointer;
   }
+ 
+ body#profpage #profile, body#paypage #transfer, body#accpage #acc{
+  background-color: #ffffff;
+  color: #1165af;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: #ffffff;
+ }
+
+ .header3 a.navitem{
+  float:right;
+  font-size: 18px;
+  color: #1165af;
+  padding: 5px 8px;
+  background-color: #ffffff;
+  /* background-color: #00467d; */
+ }
+
+ .header3 a.navitem:hover{
+  cursor: pointer;
+ }
