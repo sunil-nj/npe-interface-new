@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Payment from '../payment/Payment';
-import LoadingMask from "react-loadingmask";
-
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import './login.css'
-import PaymentPage from "../payment/Navbar";
+import { useNavigate } from 'react-router-dom';
+import "./Login.css";
+import ProfilePage from '../payment/ProfilePage';
+import { useDispatch } from 'react-redux'
+import { setUserDetails } from '../../reducer/reducer'
+import { callUserDetailsAPI}  from '../../services/UserDetailsAPI';
 
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [cutsomerId, setCustomerId] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const navigateHome =() =>{
     navigate('/');
@@ -23,7 +24,7 @@ function Login() {
   // User Login info
   const database = [
     {
-      username: "user1",
+      username: "testCustomer123",
       password: "pass1"
     },
     {
@@ -42,6 +43,8 @@ function Login() {
     event.preventDefault();
 
     var { uname, pass } = document.forms[0];
+    //const {uname, pass }= event.currentTarget.elements;
+    setCustomerId(uname);
 
     // Find user login info
     const userData = database.find((user) => user.username === uname.value);
@@ -53,6 +56,13 @@ function Login() {
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
+        callUserDetailsAPI(uname.value).then((data) => {
+          if(data) {
+            //setData(data);
+            dispatch(setUserDetails(data));
+          }
+        });
+        navigate('/profile');
       }
     } else {
       // Username not found
@@ -88,7 +98,7 @@ function Login() {
         <br />
         <br />
         <div className="button-container">
-          <input type="submit" onClick={navigateProfile}/>
+          <input type="submit" />
         </div>
       </form>
       </div>
@@ -106,12 +116,10 @@ function Login() {
       <div className="header2">
       <a onClick={navigateHome} class="logo">NPE BANK</a>
       </div>
+      
       {/* {isSubmitted ? 
         <div>
-          <LoadingMask loading={isLoading} text={"loading..."}>
-            <Payment setIsLoading={setIsLoading} />
-          </LoadingMask>
-          
+          <ProfilePage name={cutsomerId && cutsomerId.value} />
         </div> : <div className="app">{renderForm} </div>
     } */}
      <div className="app">{renderForm} </div>

@@ -89,24 +89,7 @@ export default function PaymentForm({ onClose, setSnackBarOpen, setIsLoading }) 
         setSnackBarOpen(true);
       }
     });
-    // callUploadApi(payload, patientId).then((data) => {
-    //   if (data && data.uuid) {
-    //     setUuid(data.uuid);
-    //     setIsLoading(false);
-    //     if (isPDF && !isFileSizeThreshold) {
-    //       setSnackBarOpen(true);
-    //     }
-    //   }
-    //   if (payload.data === "") {
-    //     callUploadAFileApi(state.file, data.uuid).then((data) => {
-    //     setIsLoading(false);
-    //       if (data) {
-    //         setFileUploadMessage(data.message);
-    //         setSnackBarOpen(true);
-    //       }
-    //     });
-    //   }
-    // });
+  
     onClose();
   };
 

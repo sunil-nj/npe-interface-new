@@ -1,5 +1,9 @@
-
-  .header3 {
+.completenav{
+  position: fixed;
+  top:0;
+  width: 100%;
+ }
+ .header3 {
     overflow: hidden;
     background-color: #1165af;
     box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);

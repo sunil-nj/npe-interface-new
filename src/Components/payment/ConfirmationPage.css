@@ -1,0 +1,66 @@
+.table {
+    width: 100%;
+    padding-top: 8%;
+    margin-top: 100px;
+  }
+  .row {
+    display: table-row;
+    width: auto;
+    height: 40px;
+    font-size: 18px;
+  }
+ .cell1{
+    width: 48%;
+    text-align: right;
+ }
+ .cell2{
+    width: 4%;
+    text-align: center;
+ }
+ .cell3{
+    width: 48%;
+    text-align: left;
+ }
+ .cell4{
+    padding-top: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+ }
+ .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttoncnfrmpg{
+    height: 45px;
+    text-align: left;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 7px;
+	outline: none;
+   }
+    .buttoncnfrmpg{
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      background: #1165af;
+      border: 1px solid #1165af;
+      color: #fff;
+      width: 7%;
+      margin: 1%;
+      text-align: center;
+      padding: 10px 20px;
+    }
+    .buttoncnfrmpg:hover{
+        background: #126cbbf1;
+      }

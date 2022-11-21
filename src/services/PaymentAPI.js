@@ -3,7 +3,7 @@
 export function callPaymentAPI(payload) {
 
     return fetch(
-        `http://localhost:8080/payment`,
+        `/payment`,
         {
             method: "POST",
             headers: {

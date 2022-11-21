@@ -1,0 +1,45 @@
+.proftitle{
+    font-size: 22px;
+    color: #1165af;
+    margin-top: 100px;
+    font-weight: 700;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-bottom: 1%;
+}
+
+.details{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 1.5%;
+    padding-left: 8%;
+}
+
+.row{
+    display: table-row;
+    width: auto;
+    height: 40px;
+    font-size: 18px;
+}
+
+.c1{
+    font-weight: 600;
+    width: 20%;
+}
+.c2{
+    font-weight: bold;
+    text-align: center;
+    width:4%;
+}
+.c3{
+    padding-left: 5%;
+    font-weight: 400;
+    width: 700px
+}
+
+#profpage{
+    padding-bottom: 60px;
+}
+#accpage{
+    padding-bottom: 60px;
+}

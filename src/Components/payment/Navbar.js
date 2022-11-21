@@ -24,7 +24,7 @@ function Nav3(){
     navigate('/login');
 
   };
-return(<div>
+return(<div className='completenav'>
     
     <div className="header3">
     <a onClick={navigateHome} class="logo">NPE BANK</a>
